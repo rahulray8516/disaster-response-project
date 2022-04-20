@@ -37,7 +37,6 @@ df = pd.read_sql_table('disaster_table', engine)
 # load model
 model = joblib.load("/content/disaster-response-project/models/classifier.pkl")
 
-
 # index webpage displays cool visuals and receives user input text for model
 @app.route('/')
 @app.route('/index')
