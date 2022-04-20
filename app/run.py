@@ -28,11 +28,12 @@ def tokenize(text):
 
     return clean_tokens
 
-# load data
+# load data // https://www.geeksforgeeks.org/read-sql-database-table-into-a-pandas-dataframe-using-sqlalchemy/
 engine = create_engine('sqlite:////content/disaster-response-project/data/DisasterResponse.db')
 print("engine is===============================")
 print(engine)
 df = pd.read_sql_table('disaster_table', engine)
+df.show()
 
 # load model
 model = joblib.load("/content/disaster-response-project/models/classifier.pkl")
