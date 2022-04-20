@@ -34,6 +34,7 @@ print("engine is===============================")
 print(engine)
 df = pd.read_sql_table('disaster_table', engine)
 print(df)
+
 # load model
 model = joblib.load("/content/disaster-response-project/models/classifier.pkl")
 
