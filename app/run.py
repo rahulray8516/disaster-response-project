@@ -15,6 +15,7 @@ from flask_ngrok import run_with_ngrok
 
 
 app = Flask(__name__)
+
 run_with_ngrok(app)
 
 def tokenize(text):
@@ -30,8 +31,8 @@ def tokenize(text):
 
 # load data // https://www.geeksforgeeks.org/read-sql-database-table-into-a-pandas-dataframe-using-sqlalchemy/
 engine = create_engine('sqlite:////content/disaster-response-project/data/DisasterResponse.db')
-print("engine is===============================")
-print(engine)
+# print("engine is===============================")
+# print(engine)
 df = pd.read_sql_table('disaster_table', engine)
 print(df)
 
